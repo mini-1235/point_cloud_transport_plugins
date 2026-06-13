@@ -17,6 +17,8 @@ set(dependencies
   point_cloud_interfaces
   point_cloud_transport
   rclcpp
+  zstd_cmake_module
+  zstd
 )
 
 add_library(${PROJECT_NAME}
