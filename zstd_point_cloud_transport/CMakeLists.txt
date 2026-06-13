@@ -9,6 +9,8 @@ find_package(pluginlib REQUIRED)
 find_package(point_cloud_interfaces REQUIRED)
 find_package(point_cloud_transport REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(zstd_cmake_module REQUIRED)
+find_package(zstd REQUIRED)
 
 set(dependencies
   pluginlib
@@ -29,7 +31,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   ${point_cloud_interfaces_TARGETS}
   point_cloud_transport::point_cloud_transport
   rclcpp::rclcpp
-  zstd
+  zstd::zstd
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
